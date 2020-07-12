@@ -1,5 +1,5 @@
-﻿using System;
-using Energy.Extensions;
+﻿using Energy.Extensions;
+using System;
 
 namespace Energy.DataStructures
 {

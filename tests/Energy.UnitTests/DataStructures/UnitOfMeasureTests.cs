@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Energy.DataStructures;
+﻿using Energy.DataStructures;
 using Shouldly;
+using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 

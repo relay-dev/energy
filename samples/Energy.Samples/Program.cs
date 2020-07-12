@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Sampler.ConsoleApplication;
 using System;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Energy.Samples
