@@ -36,14 +36,14 @@ Here's how you can install the package:
 
 The data structures in this library represent energy dimensions. An energy dimension is an attribute pertaining to a record in a system built for the energy industry. Since these dimensions are fundamental to the business and used so frequently, it makes sense to standardize the way they are represented. Each energy dimension exposes the same set of properties which are derived from parsing an input string provided to the constructor. Some more fun facts about energy dimensions:
 
-  1.) The dimensions are standardized, immutable, lightweight structs
-  2.) String interpretation is flexible
+  1. The dimensions are standardized, immutable, lightweight structs
+  2. String interpretation is flexible
       - Different variations of the same data are considered when parsing input strings.
       - This is valuable when a system interacts with several different vendors that represent the same attribute in different ways. For example, one vendor may represent an Electric account as 'E', while another uses 'Electric'.
-  3). There are standard sets of static values exposed by each structure that represent valid values
+  3. There are standard sets of static values exposed by each structure that represent valid values
       - For example, the Commodity structure exposes static instances that represent Electric, Gas, Solar and Unrecognized (Unrecognized is available for all energy dimensions as a representation of an input string that couldn't be parsed).
       - This allows you to use the structs similarly to the way you would use an enum
-  4). Comparison amongst instances is simple
+  4. Comparison amongst instances is simple
       - The equivalency operators are overloaded for each dimension to support comparing dimensions of the same type to each other, and for comparing strings to a dimension.
 
 #### Standardized fields
