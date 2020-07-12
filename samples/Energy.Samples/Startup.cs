@@ -24,7 +24,7 @@ namespace Energy.Samples
             var serviceCollection = new ServiceCollection()
                 .AddLogging(builder =>
                 {
-                    builder.SetMinimumLevel(LogLevel.Debug);
+                    builder.AddConfiguration(_configuration.GetSection("Logging"));
                     builder.AddConsole();
                 });
 

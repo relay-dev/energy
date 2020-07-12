@@ -16,37 +16,37 @@ namespace Energy.DataStructures
         /// <summary>
         /// Kilowatt-Hour value.
         /// </summary>
-        public static UnitOfMeasure kWh = UnitOfMeasure.CreateInstance("Kilowatt-hour", "kWh", 1);
+        public static UnitOfMeasure kWh = UnitOfMeasure.CreateInstance("Kilowatt-hour", 1, "kWh");
 
         /// <summary>
         /// Megawatt-hour value.
         /// </summary>
-        public static UnitOfMeasure MWh = UnitOfMeasure.CreateInstance("Megawatt-hour", "MWh", 2);
+        public static UnitOfMeasure MWh = UnitOfMeasure.CreateInstance("Megawatt-hour", 2, "MWh");
 
         /// <summary>
         /// Gigawatt-hour value.
         /// </summary>
-        public static UnitOfMeasure GWh = UnitOfMeasure.CreateInstance("Gigawatt-hour", "GWh", 3);
+        public static UnitOfMeasure GWh = UnitOfMeasure.CreateInstance("Gigawatt-hour", 3, "GWh");
 
         /// <summary>
         /// Therm value.
         /// </summary>
-        public static UnitOfMeasure Therm = UnitOfMeasure.CreateInstance("Therm", "Therm", 4);
+        public static UnitOfMeasure Therm = UnitOfMeasure.CreateInstance("Therm", 4, "Therm", "THR");
 
         /// <summary>
         /// Decatherm value.
         /// </summary>
-        public static UnitOfMeasure Decatherm = UnitOfMeasure.CreateInstance("Decatherm", "Dth", 5);
+        public static UnitOfMeasure Decatherm = UnitOfMeasure.CreateInstance("Decatherm", 5, "Dth");
 
         /// <summary>
         /// Centum cubic feet value.
         /// </summary>
-        public static UnitOfMeasure Ccf = UnitOfMeasure.CreateInstance("Centum cubic feet", "Ccf", 6);
+        public static UnitOfMeasure Ccf = UnitOfMeasure.CreateInstance("Centum cubic feet", 6, "Ccf");
 
         /// <summary>
         /// 1,000 cubic feet value.
         /// </summary>
-        public static UnitOfMeasure Mcf = UnitOfMeasure.CreateInstance("1,000 cubic feet", "Mcf", 7);
+        public static UnitOfMeasure Mcf = UnitOfMeasure.CreateInstance("1,000 cubic feet", 7, "Mcf");
 
         /// <summary>
         /// Creates a new UnitOfMeasure.
@@ -77,7 +77,7 @@ namespace Energy.DataStructures
 
             Id = id;
             Name = name;
-            Code = code ?? name[0].ToString().ToUpper();
+            Code = code ?? abbreviation?.ToUpper() ?? name[0].ToString().ToUpper();
             DisplayName = displayName ?? name;
             Abbreviation = abbreviation ?? name[0].ToString().ToUpper();
         }
@@ -180,11 +180,11 @@ namespace Energy.DataStructures
         /// This is used to construct the static instances.
         /// </summary>
         /// <param name="name">The name of the UnitOfMeasure.</param>
-        /// <param name="abbreviation">The abbreviation version of this UnitOfMeasure (kWh, CCF, etc.).</param>
         /// <param name="id">The Id of the UnitOfMeasure.</param>
+        /// <param name="abbreviation">The abbreviation version of this UnitOfMeasure (kWh, CCF, etc.).</param>
         /// <param name="code">The standard code that represents the UnitOfMeasure.</param>
         /// <param name="displayName">The name that should be used when displaying the UnitOfMeasure as a title.</param>
-        internal static UnitOfMeasure CreateInstance(string name, string abbreviation = null, int id = 0, string code = null, string displayName = null)
+        internal static UnitOfMeasure CreateInstance(string name, int id = 0, string abbreviation = null, string code = null, string displayName = null)
         {
             name.NotNull().NotEmpty();
 
