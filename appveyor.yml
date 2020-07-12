@@ -2,7 +2,7 @@ version: 1.0.{build}
 environment:
   ASPNETCORE_ENVIRONMENT: appveyor
   COVERALLS_REPO_TOKEN:
-    secure: Aib0dt/M2yLE5OAyHD33ENZU7MbUhDdGpVf/WDd+ECgOV7TEBrPN3tiMfqZrvCAj
+    secure: h1tEXDe7zMSq6Kx5h7m7PhbytxTbh1hfjwltLnhSdofwx6GxGoRHpgiAPvmKQn0t
 pull_requests:
   do_not_increment_build_number: true
 branches:

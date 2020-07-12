@@ -4,15 +4,15 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/rbnas7sa2tnl5adl/branch/master?svg=true)](https://ci.appveyor.com/project/sfergusonATX/energy/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/relay-dev/energy/badge.svg?branch=master&service=github)](https://coveralls.io/github/relay-dev/energy?branch=master)
-[![NuGet Release](https://img.shields.io/nuget/v/Energy.svg)](https://www.nuget.org/packages/Energy/)
-[![MyGet](https://img.shields.io/myget/relay-dev/v/Energy?color=red&label=myget)](https://www.myget.org/feed/relay-dev/package/nuget/Energy)
+[![NuGet Release](https://img.shields.io/nuget/v/Energy.svg)](https://www.nuget.org/packages/Relay.Energy/)
+[![MyGet](https://img.shields.io/myget/relay-dev/v/Energy?color=red&label=myget)](https://www.myget.org/feed/relay-dev/package/nuget/Relay.Energy)
 [![License](https://img.shields.io/github/license/relay-dev/energy.svg)](https://github.com/relay-dev/energy/blob/master/LICENSE)
 
 Energy is a small library of utilities that are useful in the energy industry. 
 
 <br />
 
-## Installing Energy.Data
+## Installing Energy
 
 Here's how you can install the package:
 
