@@ -34,12 +34,12 @@ namespace Energy.DataStructures
         /// <param name="planType">A string representation of an PlanType.</param>
         public PlanType(string planType)
         {
-            PlanType tt = Parse(planType);
+            PlanType pt = Parse(planType);
 
-            Id = tt.Id;
-            Name = tt.Name;
-            Code = tt.Code;
-            DisplayName = tt.DisplayName;
+            Id = pt.Id;
+            Name = pt.Name;
+            Code = pt.Code;
+            DisplayName = pt.DisplayName;
         }
 
         /// <summary>
@@ -134,8 +134,8 @@ namespace Energy.DataStructures
             return new PlanType(id, name, code, displayName);
         }
 
-        /// <summary>Returns the fully qualified type name of this instance.</summary>
-        /// <returns>The fully qualified type name.</returns>
+        /// <summary>Returns the name property for this instance.</summary>
+        /// <returns>The name property for this instance.</returns>
         public override string ToString()
         {
             return Name;

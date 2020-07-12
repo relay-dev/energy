@@ -74,12 +74,12 @@ namespace Energy.DataStructures
         /// <param name="accountStatus">A string representation of an AccountStatus.</param>
         public AccountStatus(string accountStatus)
         {
-            AccountStatus rt = Parse(accountStatus);
+            AccountStatus status = Parse(accountStatus);
 
-            Id = rt.Id;
-            Name = rt.Name;
-            Code = rt.Code;
-            DisplayName = rt.DisplayName;
+            Id = status.Id;
+            Name = status.Name;
+            Code = status.Code;
+            DisplayName = status.DisplayName;
         }
 
         /// <summary>
@@ -194,8 +194,8 @@ namespace Energy.DataStructures
             return new AccountStatus(id, name, code, displayName);
         }
 
-        /// <summary>Returns the fully qualified type name of this instance.</summary>
-        /// <returns>The fully qualified type name.</returns>
+        /// <summary>Returns the name property for this instance.</summary>
+        /// <returns>The name property for this instance.</returns>
         public override string ToString()
         {
             return Name;

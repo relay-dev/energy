@@ -191,8 +191,8 @@ namespace Energy.DataStructures
             return new UnitOfMeasure(id, name, code, displayName, abbreviation);
         }
 
-        /// <summary>Returns the fully qualified type name of this instance.</summary>
-        /// <returns>The fully qualified type name.</returns>
+        /// <summary>Returns the name property for this instance.</summary>
+        /// <returns>The name property for this instance.</returns>
         public override string ToString()
         {
             return Name;
