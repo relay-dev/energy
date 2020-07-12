@@ -20,8 +20,6 @@ dotnet_csproj:
   informational_version: '{version}'
 install:
   - dotnet tool install --global coveralls.net
-services:
-  - mssql2017
 nuget:
   disable_publish_on_pr: false
 before_build:
@@ -31,11 +29,11 @@ build:
   publish_nuget_symbols: false
   verbosity: normal
 test_script:
-  - dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+  - dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude="[*Samples*]*" /p:CoverletOutput=TestResults/
 after_test:
-  - csmacnz.coveralls --useRelativePaths --multiple --input "opencover=tests\Energy.DataStructures.UnitTests\TestResults\coverage.opencover.xml"
+  - csmacnz.coveralls --useRelativePaths --multiple --input "opencover=tests\Energy.UnitTests\TestResults\coverage.opencover.xml"
 artifacts:
-- path: src\Energy.DataStructures\bin\Release\*.nupkg
+- path: '**\*.nupkg'
   name: NuGet
 deploy:
 - provider: Environment
