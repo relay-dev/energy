@@ -87,13 +87,13 @@ Each dimension exposes static instances for quick comparison and assignment.
 ```c#
 private void StaticValuesRepresentValidValues()
 {
-    string accountClassString = "Large Commercial";
+    AccountClass accountClassResidential = AccountClass.Residential;
+    AccountClass accountClassSmallCommercial = AccountClass.SmallCommercial;
+    AccountClass accountClassLargeCommercial = AccountClass.LargeCommercial;
 
-    bool isLargeCommercial = (accountClassString == AccountClass.LargeCommercial);
-    AccountClass localAccountClass = AccountClass.SmallCommercial;
-
-    Console.WriteLine("Is Large Commercial: {0}", isLargeCommercial);
-    Console.WriteLine("Local Account Class: {0}", localAccountClass.Name);
+    Console.WriteLine(accountClassResidential.Name);
+    Console.WriteLine(accountClassSmallCommercial.Name);
+    Console.WriteLine(accountClassLargeCommercial.Name);
 }
 ```
 
@@ -104,11 +104,15 @@ Each dimension can be compared for equality.
 ```c#
 private void CompareForEquality()
 {
-    bool areResidentialInstancesEquivalent = (new AccountClass("Residential") == new AccountClass("Residential"));
-    bool areResidentialSmallCommercialInstancesEquivalent = (new AccountClass("Residential") == new AccountClass("Small Commercial"));
+    AccountClass accountClassResidential1 = new AccountClass("Residential");
+    AccountClass accountClassResidential2 = new AccountClass("Residential");
+    AccountClass accountClassSmallCommercial = new AccountClass("Small Commercial");
 
-    Console.WriteLine("Are Residential instances equivalent?: {0}", areResidentialInstancesEquivalent);
-    Console.WriteLine("Are Residential Small Commercial instances equivalent?: {0}", areResidentialSmallCommercialInstancesEquivalent);
+    bool isResidentialResidentialEquivalent = (accountClassResidential1 == accountClassResidential2);
+    bool isResidentialSmallCommercialEquivalent = (accountClassResidential1 == accountClassSmallCommercial);
+
+    Console.WriteLine("Is Residential Residential equivalent?: {0}", isResidentialResidentialEquivalent);
+    Console.WriteLine("Is Residential SmallCommercial equivalent?: {0}", isResidentialSmallCommercialEquivalent);
 }
 ```
 
@@ -119,13 +123,36 @@ Each dimension can also be compared for equality using strings.
 ```c#
 private void CompareForEqualityFromStrings()
 {
-    bool isResidentialResidentialEquivalent = (new AccountClass("Residential") == "Residential");
-    bool isResidentialSmallCommercialEquivalent = (new AccountClass("Residential") == "Small Commercial");
-    bool isSmallCommercialSmallCommercialAbbreviationEquivalent = (new AccountClass("Small Commercial") == "SC");
+    AccountClass accountClassResidential1 = new AccountClass("Residential");
+    AccountClass accountClassResidential2 = new AccountClass("Residential");
+    AccountClass accountClassSmallCommercial = new AccountClass("Small Commercial");
+
+    bool isResidentialResidentialEquivalent = (accountClassResidential1 == "Residential");
+    bool isResidentialSmallCommercialEquivalent = (accountClassResidential2 == "Small Commercial");
+    bool isSmallCommercialSmallCommercialAbbreviationEquivalent = (accountClassSmallCommercial == "SC");
 
     Console.WriteLine("Is Residential Residential equivalent?: {0}", isResidentialResidentialEquivalent);
     Console.WriteLine("Is Residential SmallCommercial equivalent?: {0}", isResidentialSmallCommercialEquivalent);
     Console.WriteLine("Is SmallCommercial SmallCommercial equivalent?: {0}", isSmallCommercialSmallCommercialAbbreviationEquivalent);
+}
+```
+
+### Services
+
+#### Getting all dimensions
+
+All dimensions can be returned as a collection.
+
+```c#
+private void AllDimensionsCanBeReturnedAsACollection()
+{
+    IEnumerable<AccountClass> accountClasses = new EnergyDimensionService()
+        .GetAllAccountClasses();
+
+    foreach (AccountClass accountClass in accountClasses)
+    {
+        Console.WriteLine(accountClass);
+    }
 }
 ```
 

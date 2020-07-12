@@ -1,5 +1,4 @@
 ﻿using Energy.DataStructures;
-using Energy.Services;
 using Energy.Services.Impl;
 using Shouldly;
 using System.Linq;
@@ -8,7 +7,7 @@ using Xunit.Abstractions;
 
 namespace Energy.UnitTests.Services
 {
-    public class EnergyDimensionServiceTests : UnitTest
+    public class EnergyDimensionServiceTests : AutoMockTest<EnergyDimensionService>
     {
         public EnergyDimensionServiceTests(ITestOutputHelper output)
             : base(output) { }
@@ -110,7 +109,5 @@ namespace Energy.UnitTests.Services
             output.ShouldContain(UnitOfMeasure.Ccf);
             output.ShouldContain(UnitOfMeasure.Mcf);
         }
-
-        private IEnergyDimensionService CUT => new EnergyDimensionService();
     }
 }

@@ -1,4 +1,4 @@
-﻿# FluentCommander Samples
+﻿# Samples
 
 Set this project to be the startup if it is not already
 

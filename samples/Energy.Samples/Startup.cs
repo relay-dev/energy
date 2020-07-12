@@ -30,6 +30,8 @@ namespace Energy.Samples
 
             // Add other services needed to run the application
             serviceCollection.AddSingleton(_configuration);
+            serviceCollection.AddTransient<DataStructureSamples>();
+            serviceCollection.AddTransient<ServiceSamples>();
 
             // Build the IServiceProvider
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
