@@ -20,7 +20,7 @@ namespace Energy.Samples
 
             foreach (AccountClass accountClass in accountClasses)
             {
-                Console.WriteLine(accountClass);
+                Console.WriteLine(accountClass.ToString());
             }
         }
     }
