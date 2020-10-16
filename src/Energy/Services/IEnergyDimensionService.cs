@@ -1,5 +1,4 @@
-﻿using Energy.DataStructures;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Energy.Services
 {
