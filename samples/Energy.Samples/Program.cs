@@ -1,24 +1,20 @@
-﻿using Microsoft.Extensions.Configuration;
-using Sampler.ConsoleApplication;
+﻿using Consolater;
+using Microsoft.Extensions.Configuration;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Energy.Samples
 {
-    /// <summary>
-    /// Entry point class
-    /// </summary>
     class Program
     {
-        /// <summary>
-        /// Entry point method.
-        /// </summary>
-        /// <returns>A Task to support asynchronous behavior.</returns>
         static async Task Main()
         {
             // Build configuration
             var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", false)
+                .AddJsonFile($"appsettings.{EnvironmentName}.json", true)
                 .Build();
 
             // Generate the Service Provider
@@ -27,14 +23,17 @@ namespace Energy.Samples
             try
             {
                 // Run the program
-                await new SampleProgram(serviceProvider).Run();
+                await new ConsoleAppProgram(serviceProvider).Run();
             }
             catch (Exception e)
             {
                 Console.Clear();
                 Console.WriteLine("Encountered unhandled exception:");
                 Console.WriteLine(e.Message);
+                Console.ReadLine();
             }
         }
+
+        private static string EnvironmentName => Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
     }
 }

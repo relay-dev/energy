@@ -1,5 +1,5 @@
-﻿using Energy.DataStructures;
-using Sampler.ConsoleApplication;
+﻿using Consolater;
+using Energy.DataStructures;
 using System;
 
 namespace Energy.Samples
@@ -8,13 +8,13 @@ namespace Energy.Samples
     /// For the sake of a clear and consistent set of examples, most of the sample methods below demonstrate only how to use the AccountClass dimension.
     /// All other dimensions work very similarly. A sample method with all dimensions available in this library is available towards the end of this class.
     /// </remarks>
-    [SampleFixture]
+    [ConsoleAppMenuItem]
     public class DataStructureSamples : Sample
     {
         /// <notes>
         /// Each dimension contains everything needed to parse an input string and return it's standardized constituents.
         /// </notes>
-        [Sample(Key = "1")]
+        [ConsoleAppSelection(Key = "1")]
         public void StandardizedFieldsAreExposedForInstances()
         {
             var accountClass = new AccountClass("Residential");
@@ -27,7 +27,7 @@ namespace Energy.Samples
         /// <notes>
         /// Each dimension will sensibly parse the input string to account for variations in representation from different vendors.
         /// </notes>
-        [Sample(Key = "2")]
+        [ConsoleAppSelection(Key = "2")]
         public void InterpretationIsFlexibleForInputStrings()
         {
             var accountClass1 = new AccountClass("R");
@@ -44,7 +44,7 @@ namespace Energy.Samples
         /// <notes>
         /// Each dimension exposes static instances for quick comparison and assignment.
         /// </notes>
-        [Sample(Key = "3")]
+        [ConsoleAppSelection(Key = "3")]
         public void StaticValuesRepresentValidValues()
         {
             AccountClass accountClassResidential = AccountClass.Residential;
@@ -59,7 +59,7 @@ namespace Energy.Samples
         /// <notes>
         /// Each dimension can be compared for equality.
         /// </notes>
-        [Sample(Key = "4")]
+        [ConsoleAppSelection(Key = "4")]
         public void CompareForEquality()
         {
             AccountClass accountClassResidential1 = new AccountClass("Residential");
@@ -76,7 +76,7 @@ namespace Energy.Samples
         /// <notes>
         /// Each dimension can also be compared for equality using strings.
         /// </notes>
-        [Sample(Key = "5")]
+        [ConsoleAppSelection(Key = "5")]
         public void CompareForEqualityFromStrings()
         {
             AccountClass accountClassResidential1 = new AccountClass("Residential");
