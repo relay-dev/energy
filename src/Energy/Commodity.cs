@@ -1,7 +1,7 @@
 ﻿using Energy.Extensions;
 using System;
 
-namespace Energy.DataStructures
+namespace Energy
 {
     /// <summary>
     /// The type of energy for a given account.

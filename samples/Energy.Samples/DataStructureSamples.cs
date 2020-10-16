@@ -1,5 +1,4 @@
 ﻿using Consolater;
-using Energy.DataStructures;
 using System;
 
 namespace Energy.Samples

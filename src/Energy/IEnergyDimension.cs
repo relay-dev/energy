@@ -1,4 +1,4 @@
-﻿namespace Energy.DataStructures
+﻿namespace Energy
 {
     /// <summary>
     /// Represent an attribute pertaining to a record in a system built for the Energy industry.

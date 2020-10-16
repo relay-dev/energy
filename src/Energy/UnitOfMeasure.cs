@@ -1,7 +1,7 @@
 ﻿using Energy.Extensions;
 using System;
 
-namespace Energy.DataStructures
+namespace Energy
 {
     /// <summary>
     /// The measurement type that should be used when calculating energy usage.

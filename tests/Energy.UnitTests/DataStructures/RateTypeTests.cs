@@ -1,5 +1,4 @@
-﻿using Energy.DataStructures;
-using Shouldly;
+﻿using Shouldly;
 using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;

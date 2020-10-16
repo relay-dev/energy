@@ -1,7 +1,7 @@
 ﻿using Energy.Extensions;
 using System;
 
-namespace Energy.DataStructures
+namespace Energy
 {
     /// <summary>
     /// A description of the way an energy account rate is intended to be offered.

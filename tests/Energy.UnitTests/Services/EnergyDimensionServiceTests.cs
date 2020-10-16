@@ -1,5 +1,4 @@
-﻿using Energy.DataStructures;
-using Energy.Services.Impl;
+﻿using Energy.Services.Impl;
 using Shouldly;
 using System.Linq;
 using Xunit;

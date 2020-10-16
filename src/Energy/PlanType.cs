@@ -1,7 +1,7 @@
 ﻿using Energy.Extensions;
 using System;
 
-namespace Energy.DataStructures
+namespace Energy
 {
     /// <summary>
     /// A description of how the energy account charges are issued during the term of the contract.
