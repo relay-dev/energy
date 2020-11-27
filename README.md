@@ -1,5 +1,3 @@
-<img src="https://imgur.com/KLdrWTh.png" alt="Energy" height="100" width="100">
-
 # Energy
 
 [![Build status](https://ci.appveyor.com/api/projects/status/rbnas7sa2tnl5adl/branch/master?svg=true)](https://ci.appveyor.com/project/sfergusonATX/energy/branch/master)
