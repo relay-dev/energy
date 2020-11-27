@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/relay-dev/energy/master/resources/icon.png" alt="Energy" height="150" width="150">
+<img src="https://imgur.com/KLdrWTh.png" alt="Energy" height="100" width="100">
 
 # Energy
 
@@ -8,29 +8,55 @@
 [![MyGet](https://img.shields.io/myget/relay-dev/v/Relay.Energy?color=red&label=myget)](https://www.myget.org/feed/relay-dev/package/nuget/Relay.Energy)
 [![License](https://img.shields.io/github/license/relay-dev/energy.svg)](https://github.com/relay-dev/energy/blob/master/LICENSE)
 
-Energy is a small library of utilities that are useful in the energy industry. 
+## Introduction
 
-<br />
+Energy is a small library of utilities that are useful in the energy industry.
 
-## Installing Energy
+## Getting Started
 
-Here's how you can install the package:
+<a name="installation"></a>
 
-> #### *.NET Core CLI*
-> 
-> ```
-> dotnet add package Relay.Energy
-> ```
->
-> #### *Package Manager Console*
-> 
-> ```
-> Install-Package Relay.Energy
-> ```
+### Installation
 
-<br />
+Follow the instructions below to install this NuGet package into your project:
 
-## Samples
+#### .NET Core CLI
+
+```sh
+dotnet add package Relay.Energy
+```
+
+#### Package Manager Console
+
+```sh
+Install-Package Relay.Energy
+```
+
+### Latest releases
+
+Latest releases and package version history can be found on [NuGet](https://www.nuget.org/packages/Relay.Energy/).
+
+## Build and Test
+
+Follow the instructions below to build and test this project:
+
+### Build
+
+#### .NET Core CLI
+
+```sh
+dotnet build
+```
+
+### Test
+
+#### .NET Core CLI
+
+```sh
+dotnet test
+```
+
+## Usage
 
 ### Data Structures
 
@@ -159,3 +185,8 @@ private void AllDimensionsCanBeReturnedAsACollection()
 ### More
 
 There are several other variations not documented here. You can find a Console Application with these samples [here](https://github.com/relay-dev/energy/tree/master/samples/Energy.Samples/).
+
+## Contribute
+
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change.
